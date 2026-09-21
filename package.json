@@ -1,0 +1,32 @@
+{
+  "name": "syncreact",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Reacciones de YouTube en perfecta sincronía — grabación con marcas temporales .sync y reproducción Master-Slave.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "file-saver": "^2.0.5",
+    "lz-string": "^1.5.0",
+    "lucide-react": "^0.454.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.6",
+    "react-youtube": "^10.1.0"
+  },
+  "devDependencies": {
+    "@types/file-saver": "^2.0.7",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.21"
+  }
+}
