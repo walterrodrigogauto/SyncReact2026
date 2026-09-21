@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  @apply bg-yt-bg font-sans text-yt-text antialiased;
+}
+
+code {
+  @apply rounded bg-yt-elevated px-1.5 py-0.5 font-mono text-[0.85em] text-yt-text;
+}
+
+/* El iframe de YouTube siempre llena su contenedor (aspect-video) */
+.player-frame iframe {
+  width: 100% !important;
+  height: 100% !important;
+  border: 0;
+  display: block;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #303030;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border border-yt-border bg-yt-surface;
+  }
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-full bg-yt-red px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-yt-red-hover disabled:cursor-not-allowed disabled:opacity-40;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 rounded-full border border-yt-border px-5 py-2.5 text-sm font-semibold text-yt-text transition hover:bg-yt-elevated disabled:cursor-not-allowed disabled:opacity-40;
+  }
+  .btn-danger {
+    @apply inline-flex items-center gap-2 rounded-full border border-yt-red/60 px-5 py-2.5 text-sm font-semibold text-yt-red transition hover:bg-yt-red/10 disabled:cursor-not-allowed disabled:opacity-40;
+  }
+  .input {
+    @apply w-full rounded-xl border border-yt-border bg-yt-elevated px-4 py-2.5 text-sm text-yt-text placeholder:text-yt-dim/70 focus:border-yt-red focus:outline-none disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .label {
+    @apply mb-1.5 block text-xs font-semibold uppercase tracking-wide text-yt-dim;
+  }
+  .icon-btn {
+    @apply grid h-8 w-8 place-items-center rounded-full text-yt-dim transition hover:bg-yt-elevated hover:text-white;
+  }
+}
